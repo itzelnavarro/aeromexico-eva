@@ -3,29 +3,51 @@ import HpCharacters from "../mock/hp-characters.json";
 
 const HpCard = () => {
 
-    return (
-      <div className="hpCard">
+  const [hpData, setHpData] = useState([
+    {
+      name: null,
+      gender: null,
+      house: null,
+      dateOfBirth: null,
+      eyeColour: null,
+      hairColour: null,
+      hogwartsStudent: null,
+      hogwartsStaff: null,
+      alive: null,
+      image: null
+    }
+  ]);
+  useEffect(() => {
+    if (HpCharacters) {
+      setHpData(HpCharacters);
+    }
+  }, []);
+
+  const renderHpCharacter = () => {
+    console.log(hpData);
+    return hpData.map((HpCharacter, index) => (
+      <div className="hpCard" key={index}>
         <div className="imgCard">
-          <img />
+          <img src={HpCharacter.image}/>
         </div>
         <div className="infoCard">
           <div className="statusCard">
             <span> / </span>
             <div className="favFlag"></div>
           </div>
-          <h2></h2>
+          <h2>{HpCharacter.name}</h2>
           <div className="detailsCard">
-            <p><strong>Cumpleaños:</strong></p>
-            <p><strong>Género:</strong></p>
-            <p><strong>Color de ojos:</strong></p>
-            <p><strong>Color de pelo:</strong></p>
+            <p><strong>Cumpleaños: </strong>{HpCharacter.dateOfBirth}</p>
+            <p><strong>Género: </strong>{HpCharacter.gender}</p>
+            <p><strong>Color de ojos: </strong>{HpCharacter.eyeColour}</p>
+            <p><strong>Color de pelo: </strong>{HpCharacter.hairColour}</p>
           </div>
         </div>
-      {/*
-       HpCharacters.map (HpCharacter => <h1> {HpCharacter.name} </h1>)
-      */}
       </div>
-    );
+    ));
   };
+    return <div>{renderHpCharacter()}</div>;
+    
+};
   
-  export default HpCard;
+export default HpCard;
