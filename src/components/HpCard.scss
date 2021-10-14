@@ -1,0 +1,102 @@
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    gap: 40px;
+
+    .hpCard{
+        max-width: 515px;
+        width: 50%;
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+
+        .houseCard{
+            width: 45%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            .imgCard{
+                width: 165px;
+                height: 165px;
+                border-radius: 50%;
+                overflow: hidden;
+    
+                img{
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+        
+        .bgGriff{
+            background: linear-gradient(135deg, #FF0000 0%, #FED482 100%);
+        }
+        .bgHuff{
+            background: linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
+        }
+        .bgRaven{
+            background: linear-gradient(135deg, #0597B7 0%, #66D1FF 100%);
+        }
+        .bgSlyth{
+            background: linear-gradient(135deg, #1C792B 0%, #82E95E 100%);
+        }
+        
+        .infoCard{
+            width: 55%;
+            text-align: left;
+            padding: 25px;
+
+            .statusCard{
+                span{
+                    color: #999999;
+                    font-weight: 600;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                }
+
+                .bookmarkCard{
+                    width: 20px;
+                    height: 22px;
+                    float: right;
+                    display: inline-block;
+                    background: url('bookmark.svg');
+                    background-size: contain;
+                    cursor: pointer;
+
+                    &:hover{
+                        background: url('bookmark-black.svg');
+                        background-size: contain;
+                    }
+                }
+                
+            }
+            
+            h2{
+                color: #081F32;
+                font-weight: 600;
+                font-size: 30px;
+                padding: 20px 0;
+            }
+
+            .detailsCard{
+                p{
+                    color: #374A59;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 27px;
+
+                    strong{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

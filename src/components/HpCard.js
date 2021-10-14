@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import HpCharacters from "../mock/hp-characters.json";
+import './HpCard.scss';
 
 const HpCard = () => {
 
@@ -27,13 +28,15 @@ const HpCard = () => {
     console.log(hpData);
     return hpData.map((HpCharacter, index) => (
       <div className="hpCard" key={index}>
-        <div className="imgCard">
-          <img src={HpCharacter.image}/>
+        <div className="houseCard bgGriff">
+          <div className="imgCard">
+            <img src={HpCharacter.image}/>
+            </div>
         </div>
         <div className="infoCard">
           <div className="statusCard">
-            <span> / </span>
-            <div className="favFlag"></div>
+            <span>Vivo / Estudiante</span>
+            <div className="bookmarkCard"></div>
           </div>
           <h2>{HpCharacter.name}</h2>
           <div className="detailsCard">
@@ -46,7 +49,7 @@ const HpCard = () => {
       </div>
     ));
   };
-    return <div>{renderHpCharacter()}</div>;
+    return <div className="cardContainer">{renderHpCharacter()}</div>;
     
 };
   
