@@ -35,15 +35,18 @@ const HpCard = () => {
       case 'Slytherin':
         return 'bgSlyth';
         break;
+      case 'Gryffindor':
+        return 'bgGriff';
+        break;
       default:
-          return 'bgGriff';
+          return '';
     }
   }
 
   const renderHpCharacter = () => {
 
     return hpData.map((HpCharacter, index) => (
-      <div className="hpCard" key={index}>
+      <div key={index} className={HpCharacter.alive ? 'hpCard' : 'hpCard deadStatus'}>
         <div className={"houseCard " + houseBg(HpCharacter.house)}>
           <div className="imgCard">
             <img src={HpCharacter.image}/>

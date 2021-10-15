@@ -21,6 +21,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background: linear-gradient(135deg, #6200ff 0%, #a182fe 100%);
             
             .imgCard{
                 width: 165px;
@@ -100,6 +101,9 @@
             }
         }
     }
+    .deadStatus{
+        background: #CCCCCC;
+    }
 }
 
 $breakpoint: 768px;
@@ -148,10 +152,6 @@ $breakpoint: 768px;
                 .detailsCard{
                     display: none;
                 }
-            }
-
-            .deadStatus{
-                background: #CCCCCC;
             }
         }
     }
