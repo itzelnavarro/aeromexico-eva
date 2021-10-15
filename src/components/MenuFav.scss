@@ -1,0 +1,54 @@
+.MenuCont{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 100px;
+
+    .MenuBtns{
+        color: #FFFFFF; 
+        font-size: 14px;
+        text-align: center;
+        background: #6B63B5;
+        padding: 5px 15px;
+        display: inline-block;
+        cursor: pointer;
+
+        &:first-child{
+            border-right: 1px solid #403B6D;
+        }
+
+        .MenuIcon{
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+        
+        #MenuBookmark{
+            background: url('bookmark-white.svg');
+            background-size: contain;    
+        }
+
+        #MenuAgregar{
+            background: url('add.svg');
+            background-size: contain;
+        }
+    }
+}
+
+$breakpoint: 768px;
+
+@media (max-width: $breakpoint) {
+    .MenuCont{
+        top: initial;
+        bottom: 0;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}

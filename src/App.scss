@@ -8,8 +8,7 @@
   .Header{
     padding-top: 8%;
 
-
-    img{
+    .HP-logo{
 
     }
 
@@ -41,4 +40,35 @@ button{
   &:active{
     background: #6B63B5;
  }
+}
+
+$breakpoint: 768px;
+
+@media (max-width: $breakpoint) {
+  .App{
+    background-image: none;
+
+    .Header{
+      padding-top: 30px;
+
+      .HP-logo{
+        width: 50%;
+      }
+  
+      p{
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+
+    }
+  }
+
+  button{
+    font-size: 13px;
+    min-width: 140px;
+    padding: 12px;
+    margin: 30px 5px;
+    border: 4px solid #6B63B5;
+  }
 }

@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.scss';
 import HpCard from "./components/HpCard.js";
 import Btns from "./components/Btns.js";
-
+import MenuFav from "./components/MenuFav.js";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       </header>
       <Btns/>
       <HpCard/>
+      <MenuFav/>
     </div>
   );
 }
