@@ -7,7 +7,7 @@
 
     .hpCard{
         max-width: 515px;
-        width: 50%;
+        width: 45%;
         background: #FFFFFF;
         border: 1px solid #000000;
         box-sizing: border-box;
@@ -52,6 +52,7 @@
             width: 55%;
             text-align: left;
             padding: 25px;
+            box-sizing: border-box;
 
             .statusCard{
                 span{
@@ -99,4 +100,56 @@
             }
         }
     }
+}
+
+$breakpoint: 768px;
+
+@media (max-width: $breakpoint) {
+
+    .cardContainer{
+        gap: 20px;
+        
+        .hpCard{
+            display: block;
+            position: relative;
+            border-radius: 5px;
+
+            .houseCard{
+                width: 100%;
+                height: auto;
+                padding: 10px 0;
+
+                .imgCard{
+                    width: 69px;
+                    height: 69px;
+                }
+            }
+
+            .infoCard{
+                width: 100%;
+                padding: 10px 10px 40px 10px;
+                position: relative;
+
+                .statusCard{
+                    width: 88%;
+                    position: absolute;
+                    bottom: 10px;
+
+                    span{
+                        font-size: 11px;
+                    }
+                }
+
+                h2{
+                    font-size: 16px;
+                    padding: 10px 0;
+                }
+
+                .detailsCard{
+                    display: none;
+                }
+            }
+        }
+    }
+  
 }
