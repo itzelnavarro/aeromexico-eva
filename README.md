@@ -1,4 +1,4 @@
-​# Evaluación Aeroméxico - Itzel Navarro
+# Evaluación Aeroméxico - Itzel Navarro
 
 ¡Hola! Soy Itzel Navarro.
 A continuación comparto las especificaciones de mi evaluación.
